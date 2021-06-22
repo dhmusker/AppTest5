@@ -1,5 +1,8 @@
 package com.sm.project.views;
 
+import com.sm.project.views.list.ProjectListView1;
+import com.sm.project.views.list.ProjectListView2;
+import com.sm.project.views.list.ProjectListView3;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.ComponentUtil;
 import com.vaadin.flow.component.applayout.AppLayout;
@@ -19,7 +22,7 @@ import com.vaadin.flow.router.RouterLink;
 
 import java.util.Optional;
 
-@Route(value="main")
+@Route(value="")
 public class MainView extends AppLayout {
 
     private final Tabs menu;
@@ -72,7 +75,11 @@ public class MainView extends AppLayout {
     private Component[] createMenuItems() {
         return new Tab[]{
                 createTab("Home", HomeView.class),
-                createTab("Projects", ProjectView.class)
+                createTab("Project List 1", ProjectListView1.class),
+                createTab("Project List 2 - Dialog 1", ProjectListView2.class),
+                createTab("Project List 3 - Dialog 2", ProjectListView3.class),
+                createTab("Projects", ProjectView.class),
+                createTab("Users", UserView.class)
         };
     }
 

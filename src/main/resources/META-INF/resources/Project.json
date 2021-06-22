@@ -1,0 +1,74 @@
+[{"Project":
+{
+   "Title": "Add public HTML Home page",
+   "manager": "Dermot Musker",
+   "businessCase": "Need a default public landing page",
+   "dateStarted": "16/06/2021",
+   "dateEnded": "23/06/2021",
+   "isActive": false
+}},
+{"Project":{
+   "Title": "Add public Login Page",
+   "manager": "Dermot Musker",
+   "businessCase": "Need a login page",
+   "dateStarted": "17/06/2021",
+   "dateEnded": "24/06/2021",
+   "isActive": false
+}},
+{"Project":{
+   "Title": "Add public Logout Page",
+   "manager": "Dermot Musker",
+   "businessCase": "Need a confirmation of log out",
+   "dateStarted": "18/06/2021",
+   "dateEnded": "25/06/2021",
+   "isActive": false
+}},
+{"Project":{
+   "Title": "Research how to separate public from private routes",
+   "manager": "Dermot Musker",
+   "businessCase": "need to build the web app correctly and have a plan for implementation",
+   "dateStarted": "19/06/2021",
+   "dateEnded": "26/06/2021",
+   "isActive": false
+}},
+{"Project":{
+   "Title": "Separate public from private routes",
+   "manager": "Dermot Musker",
+   "businessCase": "Apply the route plan",
+   "dateStarted": "20/06/2021",
+   "dateEnded": "27/06/2021",
+   "isActive": false
+}},
+{"Project":{
+   "Title": "Separate public from private static resources",
+   "manager": "Dermot Musker",
+   "businessCase": "separate the resources",
+   "dateStarted": "21/06/2021",
+   "dateEnded": "28/06/2021",
+   "isActive": false
+}},
+{"Project":{
+   "Title": "Add Security for a generic role",
+   "manager": "Dermot Musker",
+   "businessCase": "implement security for the app",
+   "dateStarted": "22/06/2021",
+   "dateEnded": "29/06/2021",
+   "isActive": false
+}},
+{"Project":{
+   "Title": "Add testing for public and private routes",
+   "manager": "Dermot Musker",
+   "businessCase": "implement testing of the pages",
+   "dateStarted": "23/06/2021",
+   "dateEnded": "30/06/2021",
+   "isActive": false
+}},
+{"Project":{
+   "Title": "Add Project Task data",
+   "manager": "Dermot Musker",
+   "businessCase": "Add the task data for the projects",
+   "dateStarted": "24/06/2021",
+   "dateEnded": "1/07/2021",
+   "isActive": false
+}}
+]
