@@ -1,4 +1,4 @@
-package com.sm.project.data;
+package com.sm.project.framework.data;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;

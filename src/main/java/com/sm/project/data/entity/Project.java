@@ -1,28 +1,61 @@
 package com.sm.project.data.entity;
 
-import com.sm.project.data.AbstractEntity;
+import com.sm.project.framework.data.AbstractEntity;
 import javax.persistence.Entity;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 
 @Entity
 public class Project extends AbstractEntity {
 
     private Integer id;
+    private Integer organisation;
     private String title;
-    private String manager;
+    private Integer projectManagerID;
+    private String projectManagerName;
     private String businessCase;
     private LocalDate dateStarted;
     private LocalDate dateEnded;
     private boolean isActive;
-    private String category;
+    private String categoryCode;
+    private String categoryName;
+
+    public Project() {
+
+    }
+
+    public Project(
+            Integer id,
+            Integer organisation,
+            String title,
+            Integer projectManagerID,
+            String projectManagerName,
+            String businessCase,
+            LocalDate dateStarted,
+            LocalDate dateEnded,
+            boolean isActive,
+            String categoryCode,
+            String categoryName ) {
+        this.setId( id );
+        this.setOrganisation( organisation );
+        this.setTitle( title );
+        this.setProjectManagerID( projectManagerID );
+        this.setProjectManagerName( projectManagerName );
+        this.setBusinessCase( businessCase );
+        this.setDateStarted( dateStarted );
+        this.setDateEnded( dateEnded);
+        this.setIsActive(isActive);
+        this.setCategoryCode(categoryCode);
+        this.setCategoryName(categoryName);
+    }
 
     @Override
-    public Integer getId() { return id;    }
-
+    public Integer getId() { return id; }
     @Override
-    public void setId(Integer id) {        this.id = id;    }
-
-
+    public void setId(Integer id) { this.id = id; }
+    public Integer getOrganisation() {        return organisation;    }
+    public void setOrganisation(Integer organisation) {        this.organisation = organisation;    }
     public LocalDate getDateStarted() { return dateStarted; }
     public void setDateStarted(LocalDate dateStarted) { this.dateStarted = dateStarted; }
     public LocalDate getDateEnded() { return dateEnded; }
@@ -36,11 +69,11 @@ public class Project extends AbstractEntity {
     public void setTitle(String title) {
         this.title = title;
     }
-    public String getManager() {
-        return manager;
+    public String getProjectManagerName() {
+        return projectManagerName;
     }
-    public void setManager(String manager) {
-        this.manager = manager;
+    public void setProjectManagerName(String projectManagerName) {
+        this.projectManagerName = projectManagerName;
     }
     public String getBusinessCase() {
         return businessCase;
@@ -48,30 +81,23 @@ public class Project extends AbstractEntity {
     public void setBusinessCase(String businessCase) {
         this.businessCase = businessCase;
     }
-    public String getCategory() {       return category;    }
-    public void setCategory(String category) {        this.category = category;    }
+    public String getCategoryName() {       return categoryName;    }
+    public void setCategoryName(String categoryName) {        this.categoryName = categoryName;    }
+    public String getCategoryCode() {        return categoryCode;    }
+    public void setCategoryCode(String categoryCode) {        this.categoryCode = categoryCode;    }
+    public Integer getProjectManagerID() { return projectManagerID; }
+    public void setProjectManagerID(Integer projectManagerID) { this.projectManagerID = projectManagerID; }
 
 
-    public Project() {
-
+    public Project( Integer organisation, Integer projectManagerID, String projectManagerName ) {
+        this.setOrganisation( organisation );
+        this.setProjectManagerID( projectManagerID );
+        this.setProjectManagerName( projectManagerName );
+        this.setDateStarted( LocalDate.now() );
+        this.setDateEnded( LocalDate.now().plus(1, ChronoUnit.DAYS));
+        this.setIsActive(false);
+        this.setCategoryCode("2");
+        this.setCategoryName("Skills");
     }
 
-    public Project(
-            Integer id,
-            String title,
-            String manager,
-            String businessCase,
-            LocalDate dateStarted,
-            LocalDate dateEnded,
-            boolean isActive,
-            String category ) {
-        this.setId( id );
-        this.setTitle( title );
-        this.setManager( manager );
-        this.setBusinessCase( businessCase );
-        this.setDateStarted( dateStarted );
-        this.setDateEnded( dateEnded);
-        this.setIsActive(isActive);
-        this.setCategory(category);
-    }
 }

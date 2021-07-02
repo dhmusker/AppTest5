@@ -43,4 +43,17 @@ public class ProjectTaskService extends CrudService<ProjectTask, Integer> {
     public void deleteAllTestRecords() {
         repository.deleteByCategory("Test");
     }
+
+    public List<ProjectTask> findByProjectId( Integer projectId) {
+        List<ProjectTask> list = repository.findByProjectId(projectId);
+        return list;
+    }
+
+    public void deleteById ( Integer taskId ) {
+        repository.deleteById( taskId );
+    }
+
+    public ProjectTask update(ProjectTask entity) {
+        return repository.save(entity);
+    }
 }

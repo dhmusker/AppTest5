@@ -10,17 +10,26 @@ import java.util.List;
 
 public interface ProjectRepository extends JpaRepository<Project, Integer> {
 
-    @Query("SELECT COUNT(p) FROM Project p WHERE p.category = ?1")
-    public int getCountByCategory( String category );
+    @Query("SELECT COUNT(p) FROM Project p WHERE p.organisation = ?1 and p.categoryName = ?2")
+    public int getCountByCategoryName( Integer organisation, String categoryName );
 
-    @Query("SELECT p FROM Project p WHERE p.category = ?1")
-    public List<Project> findByCategory( String category);
+    @Query("SELECT p FROM Project p WHERE p.organisation = ?1")
+    public List<Project> findAll( Integer organisation);
 
-    @Query("SELECT p FROM Project p WHERE p.title = ?1")
-    public List<Project> getByTitle( String title );
+    @Query("SELECT p FROM Project p WHERE p.organisation = ?1 and p.categoryName = ?2")
+    public List<Project> findByCategoryName( Integer organisation, String categoryName);
+
+    @Query("SELECT p FROM Project p WHERE p.organisation = ?1 and p.title = ?2")
+    public List<Project> getByTitle( Integer organisation, String title );
 
     @Modifying
     @Transactional
-    @Query("DELETE FROM Project p WHERE p.category = ?1")
-    public void deleteByCategory( String category);
+    @Query("DELETE FROM Project p WHERE p.organisation = ?1 and p.categoryName = ?2")
+    public void deleteByCategoryName( Integer organisation, String categoryName);
+
+    @Modifying
+    @Transactional
+    @Query("DELETE FROM Project p WHERE p.organisation = ?1 and p.id = ?2")
+    public void deleteByProjectId( Integer organisation, Integer id);
+
 }

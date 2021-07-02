@@ -16,9 +16,17 @@ public interface ProjectTaskRepository extends JpaRepository<ProjectTask, Intege
     @Query("SELECT p FROM ProjectTask p WHERE p.category = ?1")
     public List<ProjectTask> findByCategory(String category);
 
+    @Query("SELECT p FROM ProjectTask p WHERE p.projectId = ?1")
+    public List<ProjectTask> findByProjectId(Integer projectId);
+
     @Modifying
     @Transactional
     @Query("DELETE FROM ProjectTask p WHERE p.category = ?1")
     public void deleteByCategory( String category );
+
+    @Modifying
+    @Transactional
+    @Query("DELETE FROM ProjectTask p WHERE p.id = ?1")
+    public void deleteById( Integer id );
 
 }

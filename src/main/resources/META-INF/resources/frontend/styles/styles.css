@@ -1,0 +1,203 @@
+html {
+    --lumo-font-size: 1rem;
+    --lumo-font-size-xxxl: 1.375rem;
+    --lumo-font-size-xxl: 1.125rem;
+    --lumo-font-size-xl: 1rem;
+    --lumo-font-size-l: 0.875rem;
+    --lumo-font-size-m: 0.75rem;
+    --lumo-font-size-s: 0.6875rem;
+    --lumo-font-size-xs: 0.625rem;
+    --lumo-font-size-xxs: 0.625rem;
+    --lumo-line-height-m: 1.4;
+    --lumo-line-height-s: 1.2;
+    --lumo-line-height-xs: 1.1;
+    --lumo-border-radius: 0.75em;
+    --lumo-size-xl: 2.5rem;
+    --lumo-size-l: 2rem;
+    --lumo-size-m: 1.75rem;
+    --lumo-size-s: 1.5rem;
+    --lumo-size-xs: 1.25rem;
+    --lumo-space-xl: 1.75rem;
+    --lumo-space-l: 1.125rem;
+    --lumo-space-m: 0.5rem;
+    --lumo-space-s: 0.25rem;
+    --lumo-space-xs: 0.125rem;
+    --lumo-base-color: #d2cbcb;
+    --lumo-shade-5pct: rgba(0, 0, 0, 0.04);
+    --lumo-shade-10pct: rgba(0, 0, 0, 0.09);
+    --lumo-shade-20pct: rgba(0, 0, 0, 0.18);
+    --lumo-shade-30pct: rgba(0, 0, 0, 0.28);
+    --lumo-shade-40pct: rgba(0, 0, 0, 0.39);
+    --lumo-shade-50pct: rgba(0, 0, 0, 0.46);
+    --lumo-shade-60pct: rgba(0, 0, 0, 0.58);
+    --lumo-shade-70pct: rgba(0, 0, 0, 0.67);
+    --lumo-shade-80pct: rgba(0, 0, 0, 0.77);
+    --lumo-shade-90pct: rgba(13, 13, 13, 0.9);
+    --lumo-shade: hsl(214, 56%, 0%);
+    --lumo-tint-5pct: rgba(9, 1, 1, 0.05);
+    --lumo-tint-10pct: rgba(13, 2, 2, 0.1);
+    --lumo-tint-20pct: rgba(9, 1, 1, 0.2);
+    --lumo-tint-30pct: rgba(9, 1, 1, 0.3);
+    --lumo-tint-40pct: rgba(13, 2, 2, 0.4);
+    --lumo-tint-50pct: rgba(9, 2, 2, 0.5);
+    --lumo-tint-60pct: rgba(13, 2, 2, 0.6);
+    --lumo-tint-70pct: rgba(9, 1, 1, 0.7);
+    --lumo-tint-80pct: rgba(9, 1, 1, 0.8);
+    --lumo-tint-90pct: rgba(9, 1, 1, 0.9);
+    --lumo-tint: #0a0101;
+    --lumo-primary-text-color: rgb(30, 45, 67);
+    --lumo-primary-color-50pct: rgba(70, 78, 89, 0.5);
+    --lumo-primary-color-10pct: rgba(70, 78, 89, 0.1);
+    --lumo-primary-color: hsl(214, 12%, 31%);
+    --lumo-primary-contrast-color: #ccc7c7;
+    --lumo-error-text-color: rgb(113, 21, 14);
+    --lumo-error-color-50pct: rgba(130, 34, 28, 0.5);
+    --lumo-error-color-10pct: rgba(130, 34, 28, 0.1);
+    --lumo-error-color: hsl(3, 64%, 31%);
+    --lumo-error-contrast-color: #700a0a2b;
+    --lumo-success-text-color: rgb(16, 91, 47);
+    --lumo-success-color-50pct: rgba(95, 129, 109, 0.5);
+    --lumo-success-color-10pct: rgba(95, 129, 109, 0.1);
+    --lumo-success-color: hsl(145, 15%, 44%);
+    --lumo-header-text-color: hsl(223, 37%, 35%);
+    --lumo-body-text-color: rgba(31, 33, 61, 0.9);
+    --lumo-secondary-text-color: rgba(13, 13, 13, 0.7);
+    --lumo-tertiary-text-color: rgba(49, 47, 47, 0.5);
+    --lumo-disabled-text-color: rgba(21, 20, 20, 0.3);
+}
+
+[theme~="dark"] {
+    --lumo-base-color: hsl(214, 25%, 32%);
+    --lumo-shade-5pct: rgba(10, 12, 15, 0.05);
+    --lumo-shade-10pct: rgba(10, 12, 15, 0.1);
+    --lumo-shade-20pct: rgba(10, 12, 15, 0.2);
+    --lumo-shade-30pct: rgba(10, 12, 15, 0.3);
+    --lumo-shade-40pct: rgba(10, 12, 15, 0.4);
+    --lumo-shade-50pct: rgba(10, 12, 15, 0.5);
+    --lumo-shade-60pct: rgba(10, 12, 15, 0.6);
+    --lumo-shade-70pct: rgba(10, 12, 15, 0.7);
+    --lumo-shade-80pct: rgba(10, 12, 15, 0.8);
+    --lumo-shade-90pct: rgba(10, 12, 15, 0.9);
+    --lumo-shade: hsl(214, 18%, 5%);
+    --lumo-tint-5pct: rgba(223, 231, 241, 0.05);
+    --lumo-tint-10pct: rgba(223, 231, 241, 0.1);
+    --lumo-tint-20pct: rgba(223, 231, 241, 0.2);
+    --lumo-tint-30pct: rgba(223, 231, 241, 0.3);
+    --lumo-tint-40pct: rgba(223, 231, 241, 0.4);
+    --lumo-tint-50pct: rgba(223, 231, 241, 0.5);
+    --lumo-tint-60pct: rgba(223, 231, 241, 0.6);
+    --lumo-tint-70pct: rgba(223, 231, 241, 0.7);
+    --lumo-tint-80pct: rgba(223, 231, 241, 0.8);
+    --lumo-tint-90pct: rgba(223, 231, 241, 0.9);
+    --lumo-tint: hsl(214, 39%, 91%);
+    --lumo-primary-text-color: rgb(155, 193, 243);
+    --lumo-primary-color-50pct: rgba(117, 148, 189, 0.5);
+    --lumo-primary-color-10pct: rgba(117, 148, 189, 0.1);
+    --lumo-primary-color: hsl(214, 35%, 60%);
+    --lumo-primary-contrast-color: #080707;
+    --lumo-error-text-color: rgb(234, 109, 102);
+    --lumo-error-color-50pct: rgba(168, 57, 52, 0.5);
+    --lumo-error-color-10pct: rgba(168, 57, 52, 0.1);
+    --lumo-error-color: hsl(3, 53%, 43%);
+    --lumo-error-contrast-color: #fbf8f89c;
+    --lumo-success-text-color: rgb(96, 230, 152);
+    --lumo-success-color-50pct: rgba(55, 118, 81, 0.5);
+    --lumo-success-color-10pct: rgba(55, 118, 81, 0.1);
+    --lumo-success-color: hsl(145, 36%, 34%);
+    --lumo-success-contrast-color: #f0ebeb;
+    --lumo-header-text-color: hsl(214, 20%, 81%);
+    --lumo-body-text-color: rgba(196, 205, 217, 0.9);
+    --lumo-secondary-text-color: rgba(148, 157, 168, 0.7);
+    --lumo-tertiary-text-color: rgba(206, 213, 222, 0.5);
+    --lumo-disabled-text-color: rgba(203, 213, 225, 0.3);
+}
+
+
+.home-view {
+    background: url(../../images/DarkEmerald.jpg);
+    border: 2px solid black;
+    color: ghostwhite;
+    padding: 25px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.sidemenu-header {
+    height: var(--lumo-size-xl);
+    box-shadow: var(--lumo-box-shadow-l);
+}
+
+.sidemenu-header h1 {
+    font-size: var(--lumo-font-size-l);
+    margin: 0;
+}
+
+.sidemenu-menu {
+    padding: 0px 0px 0px 0px;
+    spacing: 0px 0px 0px 0px;
+    margin: 20px 0px 0px 20px;
+    border: 1px solid rgba(20, 33, 56, 0.68);
+    border-radius: 25px 0px 0px 25px;
+    overflow: hidden;
+}
+
+.sidemenu-header {
+    padding: 0px 0px 0px 0px;
+    spacing: 20px 20px 20px 20px;
+    margin: 20px 10px 0px 0px;
+    border: 1px solid rgba(20, 33, 56, 0.68);
+    border-radius: 0px 25px 0px 0px;
+}
+
+.sidemenu-menu #logo {
+    box-sizing: border-box;
+    box-shadow: inset 0 -1px var(--lumo-contrast-10pct);
+    padding: var(--lumo-space-s) var(--lumo-space-m);
+}
+
+.sidemenu-menu #logo img {
+    height: calc(var(--lumo-size-l) * 1.5);
+}
+
+.sidemenu-menu #logo h1 {
+    font-size: var(--lumo-font-size-xl);
+    font-weight: 600;
+    margin: 0 var(--lumo-space-s);
+}
+
+.sidemenu-menu vaadin-tab {
+    font-size: var(--lumo-font-size-s);
+    height: var(--lumo-size-l);
+    font-weight: 600;
+}
+
+.sidemenu-menu vaadin-tab:hover {
+    background-color: var(--lumo-contrast-5pct);
+    color: var(--lumo-primary-color-50pct);
+}
+
+.sidemenu-menu vaadin-tab[selected] {
+    background-color: #abafba;
+    color: #050532;
+}
+
+.sm-form-wrapper {
+    border: 20px solid #ebecef;
+    background-color: #ebecef;
+}
+
+.sm-form-view {
+    border: 1px solid #c1c4cd;
+    padding: 15px;
+    spacing: 15px;
+    background-color: white;
+    border-radius: 25px 25px 25px 25px;
+}
+
+.sm-form-header-bar {
+    background-color: #aececb;
+    font-size: var(--lumo-font-size-xl);
+    font-weight: bold;
+    color: #1d2d58;
+}

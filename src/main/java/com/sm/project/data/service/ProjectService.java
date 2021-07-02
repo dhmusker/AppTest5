@@ -22,35 +22,35 @@ public class ProjectService extends CrudService<Project, Integer> {
             return repository;
         }
 
-    public List<Project> findAll() {
-        List<Project> list = repository.findAll();
+    public List<Project> findAll( Integer organisation ) {
+        List<Project> list = repository.findAll( organisation );
         return list;
     }
 
-    public List<Project> getByTitle( String title ) {
-        List<Project> list = repository.getByTitle( title );
+    public List<Project> getByTitle( Integer organisation, String title ) {
+        List<Project> list = repository.getByTitle( organisation, title );
         return list;
     }
 
-    public void deleteAll() {
-        repository.deleteAll();
+    public void deleteByProjectId( Integer organisation, Integer projectId ) {
+        repository.deleteByProjectId( organisation, projectId );
     }
 
     public void saveAll( List<Project> projects) {
         repository.saveAll( projects );
     }
 
-    public int getTestCount() {
-        return repository.getCountByCategory("Test");
+    public int getTestCount( Integer organisation ) {
+        return repository.getCountByCategoryName( organisation, "Test");
     }
 
-    public List<Project> findAllTestRecords() {
-        List<Project> list = repository.findByCategory("Test");
+    public List<Project> findAllTestRecords( Integer organisation ) {
+        List<Project> list = repository.findByCategoryName(organisation, "Test");
         return list;
     }
 
-    public void deleteAllTestRecords() {
-        repository.deleteByCategory("Test");
+    public void deleteAllTestRecords( Integer organisation ) {
+        repository.deleteByCategoryName(organisation, "Test");
     }
 
 }
